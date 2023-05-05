@@ -1,26 +1,3 @@
-<body>
-<div id="loader">
-  <img src="img/logo.png" alt="Logo de carga">
-</div> 
-
-#loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  z-index: 9999;
-}
-window.addEventListener("load", function() {
-  const loader = document.getElementById("loader");
-  loader.style.display = "none";
-});
-</body>
-
 
 <center>☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆</p>
 <!DOCTYPE html></center>
@@ -244,7 +221,28 @@ style="width: 260px; height: 60px;background-color: black; color: #00FF00;font-s
     });
 </script> 
    
- 
+
+<div id="loader">
+  <img src="img/logo.png" alt="Logo de carga">
+</div> 
+
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+}
+window.addEventListener("load", function() {
+  const loader = document.getElementById("loader");
+  loader.style.display = "none";
+});
+
 
 </body>
 </html>
