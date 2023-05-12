@@ -1,269 +1,639 @@
-<center>
-<!DOCTYPE html></center>
+<!DOCTYPE html>
+<html>
+<head>
+<p align="center">
+  <a href="https://github.com/ADBERR1/Adberry.io/subscription">
+    <img style="width: 45%;" src="https://img.shields.io/github/watchers/usuario/repositorio.svg?style=social&label=Watch&maxAge=2592000" alt="Watch this repository ">
+  </a>
+</p>
 
- <title>⚠️Archivos  Regedits⚠️</title> 	<style> 		body { 			background-color: #000000; 			background-image: url("https://cdn.pixabay.com/photo/2018/04/03/18/09/code-3281746_960_720.jpg"); 			background-position: center center; 			background-repeat: no-repeat; 			background-attachment: fixed; 			background-size: cover; 			color: #00FF00; 			font-family: "Courier New", Courier, monospace; 			font-size: 30px; 		} 	</style> </head> <body>
- 
- <style>
+	<meta charset="utf-8">
+	<title>⚠️Archivos Regedits⚠️</title>
+	<style type="text/css">
 		body {
+			background-color: #000;
+			color: #0f0;
+			font-family: 'Courier New', monospace;
+			font-size: 18px;
+			text-align: center;
+			padding: 50px;
+		}
+
+		h1 {
+			font-size: 58px;
+			margin-top: 0;
+			text-shadow: 3px 3px 0 #0f0, 5px 5px 0 #f00, 7px 7px 0 #00f;
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+
+		a {
+			color: #0f0;
+			text-decoration: none;
+			border-bottom: 2px dotted #0f0;
+		}
+
+		a:hover {
+			color: #f00;
+			border-bottom: 2px dotted #f00;
+		}
+
+		@keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		.blink {
+			animation: blink 1s infinite;
+		}
+	</style>
+	<style>
+	#logo-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  font-family: 'Courier New', Courier, monospace;
+  color: green;
+  font-size: 50px;
+}
+
+.loading-bar {
+  position: relative;
+  width: 80%;
+  height: 20px;
+  background-color: green;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.loading-bar:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.8) 50%, transparent 100%);
+  animation: loading-bar 2s linear infinite;
+}
+
+@keyframes loading-bar {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+body {
 			margin: 20px; /* Margen de 20 píxeles en todos los lados */
 			border: 2px solid green; /* Línea de borde de 2 píxeles de ancho de color verde */
 		}
-	</style>
-	
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>⚠️Archivos Regedits⚠️</title>
+</style>
     
-    <style>
-      /* Estilos CSS para el logo de carga hacker */
-      #loader {
-        position: fixed;
-        top: -5%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #000000;
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      #loader span {
-        color: #00FF00;
-        font-size: 100px;
-        font-family: 'Courier New', Courier, monospace;
-        letter-spacing: 4px;
-        animation: blink 1s infinite;
-      }
-      
-      @keyframes blink {
-        50% {
-          opacity: 0;
-        }
-      }
-    </style>
   </head>
   <body>
-    <div id="loader">
-      <span>☆ADBERRI☆</span>
+   <div id="logo-container">
+      <h1>◤ㅤXITER.NETㅤ◢​</h1> 
+
+      <div class="loading-bar"></div>
     </div>
+        
     <script>
       // Oculta el logo de carga después de 3 segundos
       setTimeout(function() {
-        document.getElementById('loader').style.display = 'none';
-      }, 3000);
+        document.getElementById('logo-container').style.display = 'none';
+    }, 5000);
     </script>
+</head>
+
+<body>
     
-    <style>
-      .titulo {
-        background-color: #black;
-        border: 5px solid #00FF00;
-        padding: 5px;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-  
-    <div class="titulo">
-      <h1>☆°ADBERRI°☆</h1>
-    </div>
-  </body>
+	<h1>Sitió oficial:
+	Xiter.NET</h1>
+<div style="margin-top: 50px;" class="navbar">
+  <a href="#home" id="Inicio" >Inicio</a>
+  <a href="#about">Sobre nosotros</a>
+  <a href="#services">Servicios</a>
+  <a href="#contact">Contacto</a>
+</div>
+
+<style>
+
+.navbar {
+  background-color: black;
+  overflow: hidden;
+  text-align: center;
+}
+
+.navbar a {
+  display: inline-block;
+  color: blue;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 27px;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: black;
+  color: red;
+}
+
+.navbar a.active {
+  background-color: white;
+  color: black;
+}
+</style>	
+
+<script>
+document.getElementById("Inicio").addEventListener("click", function(){
+  location.reload();
+});
+</script>
+
 </head>
 <body>
 
+	<div><div style="margin-top: 80px; background-color: black; border: 5px solid #FF0000; padding: 10px; font-size: 16px;"><p><small>Le damos la bienvenida a nuestro sitio web, en el cual podrá encontrar archivos Regedits gratuitos para Free Fire, sin la necesidad de recurrir a diversas páginas para su instalación.</small></p>
+<p><small>A continuación, le proporcionaremos los archivos Regedits junto con una breve descripción de cada uno de ellos.</small></p></div></head>
 
-
-<select style="background-color: green;
-float: right;
-font-size: 30px;
-margin-top: 20px;
-text-align: center;
-margin-left: 20px;"
-
-onchange="window.location.href=this.value;">
-  <option 
-value="#">REDES</option>
-  <option value="https://youtube.com/@adberrir.p.7973">YouTube</option>
-  <option value="https://instagram.com/adberri.ff?igshid=ZDdkNTZiNTM=">Instagram</option>
-  <option value="https://www.tiktok.com/@adberri?_t=8c35huGz1Az&_r=1">TikTok</option>
-  <option value="">WhatsApp</option>
-  <option 
-value="salir">Salir</option>
-</select>
+	<body>
+	<div><div style="margin-top: 80px; font-size: 16px;"<p><small >Archivos Regedits Gratuitos:</small></p></div></head>
+	
+	 <body>
 
 <style>
-   div {
-      padding-top: 60px;
-   }
-</style>
 
 
-<center>
+#message {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  z-index: 9998;
+  animation: fadeOut 8s forwards;
+}
 
-<div><h1><p>"BIENVENIDO"</p></h1>
-<p>♥︎Hola bien venidos a la página web donde podras encontrar diversos archivos para dar todo rojo en Free Fire, esto con el beneficio de poder descargarlos sin tener que pasar por anuncios o paginas molestas con el motivo de ayudar a todos aquellos que lo necesitan.♥︎</p>
-
-<p>●Por otra parte tambien se agregan codigos canjeables en la página "reward.ff.garena.com" para aquellas personas que no utilizan estos tipos de archivos.●</p>
-
-★Aqui abajo les dejo los archivos con su breve descripción de lo que hacen★</p></div>
-
-</body>
-
-<style>
-   div {
-      padding-top: 200px;
-   }
-</style>
-
-  <div><div style="background-color: black; border: 5px solid #00FF00; padding: 10px;">
-  <p>AIMBOT CABEZA 💯</p>
-</div>
-    
-    <p>Para la ejecutacion de este archivo, abajo se dejara un video de como hacerlo.</p>
-    <p>Este archivo esta programado para dar todo rojo a la cabeza sin esfuerzo alguno, para su instalación solo preciona el boton de abajo asi los llevara a la pagina de instalación...</p></div>
-</body>
-
-        <center> <button id="miBoton"
-style="width: 230px; height: 50px;background-color: green; color: black;font-size: 30px;">Descargar</button>
- 
- 
- <script>
-    document.getElementById("miBoton").addEventListener("click", function() {
-        window.open("https://www.mediafire.com/file/36druq96qr5reup/Adb.zip/file", "MiVentana", "width=500,height=500");
-    });
-</script>
-
-<style>
-   div {
-      padding-top: 250px;
-   }
-</style>
-
-    <div><div style="background-color: black; border: 5px solid #00FF00; padding: 10px;">
-  <p>AIMBOT💯+HOLOGRAMA</p>
-</div>
-    
-    <p>Para la ejecutacion de este archivo, abajo se dejara un video de como hacerlo.</p>
-    <p>Este archivo que de dar puro rojo tambien puede verlos atravez de las paredes, para la instalación de este archivo abajo hay un boton que te llevara directo a la descarga...</p></div>
-    
-<center> <button id="MiBoton"
-style="width: 230px; height: 50px;background-color: green; color: black;font-size: 30px;">Descargar</button>
-
-<script>
-    document.getElementById("MiBoton").addEventListener("click", function() {
-        window.open("https://www.mediafire.com/file/gh85opvky6w81i7/Adbe.zip/file", "MiVentana", "width=500,height=500");
-    });
-</script>
-
-<style>
-   div {
-      padding-top: 250px;
-   }
-</style>
-
-    <div><div style="background-color: black; border: 5px solid #00FF00; padding: 10px;">
-  <p>AIMBOT💯+NPC Name</p>
-</div>
-    
-    <p>Para la ejecutacion de este archivo, abajo se dejara un video de como hacerlo.</p>
-    <p>Este Archivo cuenta con un 100% de tiro a la cabeza incluyendo un NPC Name que los jugadores llevaran en su cabeza para facilitar su ubicación, descargalo solo apretando el boton de abajo...</p></div>
-    
-<center> <button id="MIBoton"
-style="width: 230px; height: 50px;background-color: green; color: black;font-size: 30px;">Descargar</button>
- 
- <style>
-   div {
-      padding-top: 250px;
-   }
-</style>
- 
- <p>                              
-                                 
-                                 
-                                 
-                                 </p>
- 
- <script>
-    document.getElementById("MIBoton").addEventListener("click", function() {
-        window.open("https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file", "MiVentana", "width=500,height=500");
-    });
-</script>
-
-<center> <button id="MIBOTon"
-style="width: 300px; height: 50px;background-color: black; color: #00FF00;font-size: 30px;">Video de instalación</button>
- 
- 
- <script>
-    document.getElementById("MIBOTon").addEventListener("click", function() {
-        window.open("https://adberr1.github.io/video-de-instalacion.io/", "MiVentana", "width=500,height=500");
-    });
-</script>
-  
-
-
-<div><div style="background-color: black; border: 5px solid #00FF00; padding: 10px;">
-  <p>✅️CODIGOS REWARDS✅️</p>
-</div>
-    
-<p>En este apartado encontraras codigos canjeables para ganar premios sin necesidad de buscarlos en YouTube o en cualquier otra pagina y sin tener que dudar si son validos o no, para canjearlos dirijete a la pagina de reward.ff.garena.com para canjearlos necesitas iniciar secion en la página con tu cuenta vinculada con Free Fire, abajo esta el link directo a la página...</p></div>
-
-<style>
-   div {
-      padding-top: 100px;
-   }
-</style>
-
-<label for="miMenu"></label>
-<select style="background-color: green;
-  id="miMenu">
-  <option value="CODIGOS">☆CODIGOS☆</option>
-  <option value="Codigo1">HZX8SUTD33VN</option>
-  <option value="Codigo2">TPFU7QHXG1EC</option>
-  <option value="Codigo3">RXF2EQ8BUHJ7</option>
-</select>
-
-<b><style>
-  select {
-    font-size: 30px; /* Tamaño de fuente del menú */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
   }
-  option {
-    font-size: 20px; /* Tamaño de fuente de las opciones */
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
-</style></b>
+}
+</style>
+<div id="message">Cargando página...</div>
+</head>
 
-<p>                                              
+<body>
+<center><div><div style="margin-top: 40px; background-color: black; border: 5px solid #FF0000; padding: 10px; font-size: 18px;"><a href="https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file"><p><small>.........................
+..................................</p></small><button id="myButton">⚠️ARCHIVO REGEDIT⚠️</button></a></div></center>
+
+  <style>
+  #myButton {
+  border: none;
+  background-color: #000;
+  color: #0f0;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#myButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+#myButton:hover::before {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2639866587135487"
+     crossorigin="anonymous"
+ $(document).ready(function() {
+  $('#myButton').click(function() {
+    $('#loading').show();
+    $('#message').show();
+    setTimeout(function() {
+      window.location.href = 'https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file/';
+    }, 3000);
+    setTimeout(function() {
+      $('#message').hide();
+    }, 5000);
+  });
+});
+  ></script>
+ </div>
+</head>
+<body>
+<center><div><div style="margin-top: 40px; background-color: black; border: 5px solid #FF0000; padding: 10px; font-size: 18px;"><a href="https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file"><p><small>.........................
+..................................</p></small><button id="myButton">⚠️ARCHIVO REGEDIT⚠️</button></a></div></center>
+
+  <style>
+  #myButton {
+  border: none;
+  background-color: #000;
+  color: #0f0;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#myButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+#myButton:hover::before {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2639866587135487"
+     crossorigin="anonymous"
+ $(document).ready(function() {
+  $('#myButton').click(function() {
+    $('#loading').show();
+    $('#message').show();
+    setTimeout(function() {
+      window.location.href = 'https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file/';
+    }, 3000);
+    setTimeout(function() {
+      $('#message').hide();
+    }, 5000);
+  });
+});
+  ></script>
+ </div>
+</head>
+<body>
+<center><div><div style="margin-top: 40px; background-color: black; border: 5px solid #FF0000; padding: 10px; font-size: 18px;"><a href="https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file"><p><small>.........................
+..................................</p></small><button id="myButton">⚠️ARCHIVO REGEDIT⚠️</button></a></div></center>
+
+  <style>
+  #myButton {
+  border: none;
+  background-color: #000;
+  color: #0f0;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#myButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+#myButton:hover::before {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2639866587135487"
+     crossorigin="anonymous"
+ $(document).ready(function() {
+  $('#myButton').click(function() {
+    $('#loading').show();
+    $('#message').show();
+    setTimeout(function() {
+      window.location.href = 'https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file/';
+    }, 3000);
+    setTimeout(function() {
+      $('#message').hide();
+    }, 5000);
+  });
+});
+  ></script>
+ </div>
+</head>
+<body>
+<center><div><div style="margin-top: 40px; background-color: black; border: 5px solid #FF0000; padding: 10px; font-size: 18px;"><a href="https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file"><p><small>.........................
+..................................</p></small><button id="myButton">⚠️ARCHIVO REGEDIT⚠️</button></a></div></center>
+
+  <style>
+  #myButton {
+  border: none;
+  background-color: #000;
+  color: #0f0;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#myButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+#myButton:hover::before {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2639866587135487"
+     crossorigin="anonymous"
+ $(document).ready(function() {
+  $('#myButton').click(function() {
+    $('#loading').show();
+    $('#message').show();
+    setTimeout(function() {
+      window.location.href = 'https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file/';
+    }, 3000);
+    setTimeout(function() {
+      $('#message').hide();
+    }, 5000);
+  });
+});
+  ></script>
+ </div>
+</head>
+<body>
+<center><div><div style="margin-top: 40px; background-color: black; border: 5px solid #FF0000; padding: 10px; font-size: 18px;"><a href="https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file"><p><small>.........................
+..................................</p></small><button id="myButton">⚠️ARCHIVO REGEDIT⚠️</button></a></div></center>
+
+  <style>
+  #myButton {
+  border: none;
+  background-color: #000;
+  color: #0f0;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#myButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+#myButton:hover::before {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2639866587135487"
+     crossorigin="anonymous"
+ $(document).ready(function() {
+  $('#myButton').click(function() {
+    $('#loading').show();
+    $('#message').show();
+    setTimeout(function() {
+      window.location.href = 'https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file/';
+    }, 3000);
+    setTimeout(function() {
+      $('#message').hide();
+    }, 5000);
+  });
+});
+  ></script>
+ </div>
+</head>
+
+<body>
+<center><div><div style="margin-top: 40px; background-color: black; border: 5px solid #FF0000; padding: 10px; font-size: 18px;"><a href="https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file"><p><small>.........................
+..................................</p></small><button id="myButton">⚠️ARCHIVO REGEDIT⚠️</button></a></div></center>
+
+  <style>
+  #myButton {
+  border: none;
+  background-color: #000;
+  color: #0f0;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#myButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+#myButton:hover::before {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2639866587135487"
+     crossorigin="anonymous"
+ $(document).ready(function() {
+  $('#myButton').click(function() {
+    $('#loading').show();
+    $('#message').show();
+    setTimeout(function() {
+      window.location.href = 'https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file/';
+    }, 3000);
+    setTimeout(function() {
+      $('#message').hide();
+    }, 5000);
+  });
+});
+  ></script>
+ </div>
+</head>
+
+<body>
+<center><div><div style="margin-top: 40px; background-color: black; border: 5px solid #FF0000; padding: 10px; font-size: 18px;"><a href="https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file"><p><small>.........................
+..................................</p></small><button id="myButton">⚠️ARCHIVO REGEDIT⚠️</button></a></div></center>
+
+  <style>
+  #myButton {
+  border: none;
+  background-color: #000;
+  color: #0f0;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#myButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+#myButton:hover::before {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2639866587135487"
+     crossorigin="anonymous"
+ $(document).ready(function() {
+  $('#myButton').click(function() {
+    $('#loading').show();
+    $('#message').show();
+    setTimeout(function() {
+      window.location.href = 'https://www.mediafire.com/file/nnygqgqyd2k912y/Adber.zip/file/';
+    }, 3000);
+    setTimeout(function() {
+      $('#message').hide();
+    }, 5000);
+  });
+});
+  ></script>
+ </div>
+</head>
 
 
-     
-     
-     
-     
-     
-     
-     
-     
-     
-                                 
-                                      
-                                             </p>                                                                   
-    
-    
-<center> <button id="MIBOton"
-style="width: 260px; height: 60px;background-color: black; color: #00FF00;font-size: 30px;">Canjear</button>
- 
- 
- <script>
-    document.getElementById("MIBOton").addEventListener("click", function() {
-        window.open("https://reward.ff.garena.com/es", "MiVentana", "width=500,height=500");
-    });
-</script> 
-   
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2639866587135487"
+     crossorigin="anonymous"></script>
+
+
+
+
+
+
 
 
 </body>
 </html>
-
-<p>☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆</p>
