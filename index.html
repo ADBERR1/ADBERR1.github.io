@@ -1,81 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-  <title>《ADBERRI》</title>
-  <style>
-    @keyframes move {
-      0% { transform: translateX(0px); }
-      100% { transform: translateX(0); }
-      50% { transform: translateX(1000px); }
-    }
-    
-    body {
-      background-color: #000;
-      color: #FFF;
-      text-align: center;
-    }
-    
-    h1 {
-      animation: move 4s linear infinite;
-      border: 2px solid #FFF;
-      display: inline-block;
-      padding: 10px;
-      font-family: 'Press Start 2P', cursive;
-    }
-    h2 {
-      animation: move 0 linear infinite;
-      border: 2px solid #FFF;
-      display: inline-block;
-      padding: 10px;
-      font-family: Arial;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .producto {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .producto img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+
+        .whatsapp-logo {
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        #progressbar {
+            width: 100%;
+            height: 10px;
+            background-color: #f0f0f0;
+        }
+
+        #progressbar span {
+            display: block;
+            height: 100%;
+            background-color: #333;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var progressBar = document.getElementById('progressbar');
+            var progressBarWidth = 1;
+            var timeInterval = setInterval(frame, 10);
+
+            function frame() {
+                if (progressBarWidth >= 100) {
+                    clearInterval(timeInterval);
+                    window.location.href = "inicio.html";
+                } else {
+                    progressBarWidth++;
+                    progressBar.querySelector('span').style.width = progressBarWidth + '%';
+                }
+            }
+        }
+
+        function openWhatsApp() {
+            window.location.href = "https://wa.me/tu_numero_de_telefono";
+        }
+    </script>
 </head>
 <body>
-  <h1>¡PUTO YERAY BIGOTÓN!</h1> 
-  
- <h3 style="border: 2px solid #FFF">¡PARA LOS NIÑOS BIGOTONES!</h3>
- 
-<h2>En un lugar muy lejano, vive una tribu especial,
-Son los niños bigotones, con un estilo sin igual.
-Con bigotes graciosos, llenos de diversión,
-Los niños bigotones traen risas y emoción.</h2>
+    <header>
+        <div class="logo">
+            <img src="ruta_de_tu_logo" alt="Tu logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Servicio</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section>
+            <h1>¡Bienvenido a nuestra tienda en línea!</h1>
+            <p>Explora nuestra amplia gama de productos de alta calidad.</p>
+        </section>
 
-<h2>Niños bigotones, llenos de carisma y alegría,
-Con bigotes adornados, llenan de magia el día.
-Saltan y juegan, con sus bigotes al viento,
-Niños bigotones, ¡qué encanto tan tierno!</h2>
+        <section>
+            <div class="producto">
+                <img src="ruta_de_tu_imagen" alt="Descripción del producto">
+                <h3>Producto 1</h3>
+                <p>Descripción del producto.</p>
+                <a href="#">Comprar</a>
+            </div>
 
+            <div class="producto">
+                <img src="ruta_de_tu_imagen" alt="Descripción del producto">
+                <h3>Producto 2</h3>
+                <p>Descripción del producto.</p>
+                <a href="#">Comprar</a>
+            </div>
 
-<h2>Cada bigote es único, con formas sin igual,
-Pueden ser delgados, rizados o rectos al final.
-Los niños bigotones, con su estilo audaz,
-Nos enseñan a ser valientes, a brillar con paz.</h2>
+            <div class="producto">
+                <img src="ruta_de_tu_imagen" alt="Descripción del producto">
+                <h3>Producto 3</h3>
+                <p>Descripción del producto.</p>
+                <a href="#">Comprar</a>
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <p>Todos los derechos reservados &copy; 2023</p>
+        <img src="ruta_de_tu_logo_whatsapp" alt="Logo de WhatsApp" class="whatsapp-logo" onclick="openWhatsApp()">
+    </footer>
 
-<h2>Niños bigotones, llenos de carisma y alegría,
-Con bigotes adornados, llenan de magia el día.
-Saltan y juegan, con sus bigotes al viento,
-Niños bigotones, ¡qué encanto tan tierno!</h2>
-
-
-<h2>Sin importar el tamaño ni el color,
-Los bigotes de los niños nos traen amor.
-Cada uno es especial, único en su ser,
-Los niños bigotones nos enseñan a querer.</h2>
-
-
-<h2>Con su estilo distintivo, conquistan cada corazón,
-Los niños bigotones son la sensación.
-Bailan y cantan, con risas sin cesar,
-Los bigotones nos inspiran a soñar.</h2>
-
-
-<h2>Niños bigotones, llenos de carisma y alegría,
-Con bigotes adornados, llenan de magia el día.
-Saltan y juegan, con sus bigotes al viento,
-Niños bigotones, ¡qué encanto tan tierno!</h2>
+    <div id="progressbar">
+        <span></span>
+    </div>
 </body>
 </html>
