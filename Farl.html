@@ -81,7 +81,25 @@
                </br>
 
                
-               <a href="./Cod.html" class="cta">Canjear</a>
+               <a onclick="abrirFarlight84()">Abrir Farlight 84 href="farlight84://"" class="cta">Canjear</a>
+
+<script>
+    function abrirFarlight84() {
+        // Reemplaza "farlight84://" con el esquema de URI personalizado de Farlight 84
+        var uri = "farlight84://";
+
+        // Intenta abrir la aplicación usando el esquema de URI
+        window.location.href = uri;
+
+        // Si la aplicación no está instalada, puedes redirigir a la tienda de aplicaciones correspondiente
+        setTimeout(function () {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.farlight84"; // URL de Google Play Store para Android
+            //window.location.href = "https://apps.apple.com/app/farlight-84/id123456789"; // URL de la App Store para iOS
+        }, 500); // Espera medio segundo antes de redirigir a la tienda de aplicaciones
+    }
+</script>
+
+
             </div>
         </section>
 
