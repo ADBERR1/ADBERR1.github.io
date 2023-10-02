@@ -684,3 +684,8 @@ body {
 .codigo {
     justify-items: left;
 }
+
+.knowledge__imgi { 
+   width: 65%; 
+   display: block; 
+ }
