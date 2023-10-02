@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Adberry.com</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+  <link rel="shortcut icon" href="./img/logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+</head>
+<body>
+
+ <section class="testimony">
+                <div class="testimony__container container">
+                    <img src="./img/flechaIarrow.svg" class="testimony__arrow" id="before">
+            
+                    <section class="testimony__body testimony__body--show" data-id="1">
+                        <div class="testimony__texts">
+                            <h2 class="subtitle">¡Códigos de Clash Royale!<span class="testimony__course">Proximamente</span></h2>
+                            <p class="testimony__review">!Proximamente!...Códigos de Clash Royale en nuestro sitio web. Estate al pendientede de estos codigos ya que algunos son exclusivos, registrate en nuestra página web para asi recibir notificaciones cada que se actualizen los códigos.</p>
+                        </div>
+            
+                        <figure class="testimony__picture">
+                            <img src="./img/clash.webp" class="testimony__img">
+                        </figure>
+                    </section>
+            
+                    <section class="testimony__body" data-id="2">
+                        <div class="testimony__texts">
+                            <h2 class="subtitle">¡Regedits 100% Antiban FF!<span class="testimony__course">Proximamente</span></h2>
+                            <p class="testimony__review">!Proximamente!...Regedits 100% Antiban para poder mejorar tu jugabilidd en Free Fire sin ningun riesgo de baneo, Estate al pendiente de estos regedist registrandote en nuestra página y asi recibir notificaciones de cuando estos salgan.</p>
+                        </div>
+            
+                        <figure class="testimony__picture">
+                            <img src="./img/regedit.jpeg" class="testimony__img">
+                        </figure>
+                    </section>
+            
+                    <section class="testimony__body" data-id="3">
+                        <div class="testimony__texts">
+                            <h2 class="subtitle">¡Códigos de diamantes FF!<span class="testimony__course">Proximamente</span></h2>
+                            <p class="testimony__review">!Proximamente!...Códigos de diamantes en nuestra página web. Estate al pendiente de estos codigos ya que son altamente exclusivos y solo para unas cuantas personas, registrate en nuestro sitio web para asi recibir notificaciones cada que se actualizen los códigos.</p>
+                        </div>
+            
+                        <figure class="testimony__picture">
+                            <img src="./img/diamons.jpeg" class="testimony__img">
+                        </figure>
+                    </section>
+            
+                    <img src="./img/flechaDarrow.svg" class="testimony__arrow" id="next">
+                </div>
+            </section>
+
+            <section class="contenido-descripcion">
+                <a href="./index.html" class="btn-link">>>Regresar<<</a>
+            </section>    
+
+<!-- count particles -->
+
+
+<!-- particles.js container -->
+<div id="particles-js"></div>
+
+<!-- scripts -->
+<script src="../particles.js"></script>
+<script src="js/app.js"></script>
+
+<!-- stats.js -->
+<script src="js/lib/stats.j"></script>
+<script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
+<script src="./js/slider.js"></script>
+    <script src="./js/questions.js"></script>
+    <script src="./js/menu.js"></script>
+</body> 
+
+</body>
+</html>
