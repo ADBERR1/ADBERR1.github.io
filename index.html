@@ -164,6 +164,29 @@
             border-left: 2px solid var(--primary-color);
             padding-left: 1.5rem;
         }
+   
+        /* Estilo para lista con guiones */
+
+        .lista-guiones {
+            list-style: none;             /* Quitar viñetas por defecto */
+            padding-left: 0;              /* Quitar padding */
+            text-align: left;             /* Alinear texto a la izquierda */
+}
+
+        .lista-guiones li {
+            position: relative;
+            padding-left: 1.5rem;      /* Espacio para el guión */
+            margin-bottom: 0.8rem;     /* Separación entre elementos */
+            line-height: 1.5;
+}
+
+        .lista-guiones li::before {
+            content: "—";                 /* Guión largo (em dash) */
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);  /* Color del guión */
+            font-weight: bold;
+} 
 
         .links-grid {
             display: grid;
