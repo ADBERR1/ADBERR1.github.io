@@ -1,66 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adberry</title>
-  <link rel="shortcut icon" href="./img/logo1.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/styles.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Hub - Tu Portal Financiero</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
-  <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">📈 TradingHub</div>
+            <ul class="nav-links">
+                <li><a href="#inicio" class="nav-link active" data-section="inicio">Inicio</a></li>
+                <li><a href="#enlaces" class="nav-link" data-section="enlaces">Enlaces</a></li>
+                <li><a href="#contactos" class="nav-link" data-section="contactos">Contactos</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <div class="container">
-     <div class="card">
-       <div class="face face1">
-         <div class="content">
-            <i class="fab fa-windows"></i>            
-           <h3>Windows</h3>
-         </div>
-       </div>
-       <div class="face face2">
-         <div class="content">
-           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?</p>
-           <a href="#" type="button">Read More</a>
-         </div>
-       </div>
-    </div>
-    
-    <div class="card">
-       <div class="face face1">
-         <div class="content">
-      <i class="fab fa-android"></i>               <h3>Android</h3>
-         </div>
-       </div>
-       <div class="face face2">
-         <div class="content">
-           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?</p>
-           <a href="#" type="button">Read More</a>
-         </div>
-       </div>
-    </div>
-    
-    
-    <div class="card">
-       <div class="face face1">
-         <div class="content">
-           <i class="fab fa-apple"></i>
-            <h3>Apple</h3>
-         </div>
-       </div>
-       <div class="face face2">
-         <div class="content">
-           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?</p>
-           <a href="#" type="button">Read More</a>
-         </div>
-       </div>
-    </div>
-  </div>
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Sección Inicio -->
+        <section id="inicio" class="section active">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Bienvenido al Futuro del Trading</h1>
+                    <p class="hero-subtitle">Tu plataforma definitiva para análisis y estrategias financieras</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">📊</div>
+                            <div class="stat-value">$2.4M</div>
+                            <div class="stat-label">Volumen Diario</div>
+                            <span class="stat-change positive">+12.5%</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🚀</div>
+                            <div class="stat-value">1,847</div>
+                            <div class="stat-label">Traders Activos</div>
+                            <span class="stat-change positive">+8.3%</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">💹</div>
+                            <div class="stat-value">94.2%</div>
+                            <div class="stat-label">Tasa de Éxito</div>
+                            <span class="stat-change positive">+2.1%</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">⚡</div>
+                            <div class="stat-value">0.03s</div>
+                            <div class="stat-label">Latencia</div>
+                            <span class="stat-change negative">-15%</span>
+                        </div>
+                    </div>
 
+                    <div class="chart-container">
+                        <div class="chart-line"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Sección Enlaces -->
+        <section id="enlaces" class="section">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    Recursos de Trading
+                </h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">
+                    Accede a las mejores herramientas y plataformas del mercado
+                </p>
 
-<script src="./js/script.js"></script>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-icon">📈</div>
+                        <h3 class="link-title">Análisis Técnico</h3>
+                        <p class="link-description">Herramientas avanzadas para análisis de patrones y tendencias del mercado.</p>
+                        <a href="#" class="link-url">Acceder →</a>
+                    </div>
+                    <div class="link-card">
+                        <div class="link-icon">📰</div>
+                        <h3 class="link-title">Noticias Financieras</h3>
+                        <p class="link-description">Mantente actualizado con las últimas noticias del mercado financiero global.</p>
+                        <a href="#" class="link-url">Leer más →</a>
+                    </div>
+                    <div class="link-card">
+                        <div class="link-icon">🎓</div>
+                        <h3 class="link-title">Academia Trading</h3>
+                        <p class="link-description">Cursos y tutoriales para mejorar tus habilidades de trading.</p>
+                        <a href="#" class="link-url">Comenzar →</a>
+                    </div>
+                    <div class="link-card">
+                        <div class="link-icon">💼</div>
+                        <h3 class="link-title">Broker Partners</h3>
+                        <p class="link-description">Los mejores brokers con spreads competitivos y ejecución rápida.</p>
+                        <a href="#" class="link-url">Ver brokers →</a>
+                    </div>
+                    <div class="link-card">
+                        <div class="link-icon">🤖</div>
+                        <h3 class="link-title">Trading Automático</h3>
+                        <p class="link-description">Sistemas de trading algorítmico y bots automatizados.</p>
+                        <a href="#" class="link-url">Explorar →</a>
+                    </div>
+                    <div class="link-card">
+                        <div class="link-icon">📊</div>
+                        <h3 class="link-title">Market Scanner</h3>
+                        <p class="link-description">Escanea múltiples mercados en busca de las mejores oportunidades.</p>
+                        <a href="#" class="link-url">Escanear →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contactos -->
+        <section id="contactos" class="section">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    Contacto
+                </h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">
+                    Conecta con nuestro equipo de expertos
+                </p>
+
+                <div class="contact-container">
+                    <form class="contact-form" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" required placeholder="¿En qué podemos ayudarte?">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required placeholder="Describe tu consulta..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon">📧</div>
+                            <div class="info-label">Email</div>
+                            <div class="info-value">info@tradinghub.com</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📱</div>
+                            <div class="info-label">Teléfono</div>
+                            <div class="info-value">+1 234 567 890</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-label">Ubicación</div>
+                            <div class="info-value">New York, USA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
