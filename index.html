@@ -375,7 +375,7 @@ Así de seguros estamos del valor que entregamos.</p>
                 <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--primary-color);">
                     Contacto
                 </h2>
-                <form class="contact-form" onsubmit="handleSubmit(event)">
+             <form action="https://formspree.io/f/{form_id}" method="post">
                     <div class="form-group">
                         <label for="name">Nombre Completo</label>
                         <input type="text" id="name" name="name" required placeholder="Tu nombre">
@@ -395,6 +395,7 @@ Así de seguros estamos del valor que entregamos.</p>
     </main>
 
     <script>
+
         // Función simple para cambiar secciones
         function showSection(sectionId) {
             // Ocultar todas las secciones
