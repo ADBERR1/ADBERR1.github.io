@@ -4,7 +4,237 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trading Hub - Tu Portal Financiero</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Copia todo el CSS de styles.css aquí */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #00ff88;
+            --secondary-color: #00d4ff;
+            --danger-color: #ff3366;
+            --bg-dark: #0a0e1a;
+            --bg-card: #141925;
+            --text-primary: #ffffff;
+            --text-secondary: #8892b0;
+            --border-color: #2a3142;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Todo el CSS restante... */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(20, 25, 37, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        .nav-links a.active {
+            color: var(--primary-color);
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        main {
+            margin-top: 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section {
+            min-height: calc(100vh - 80px);
+            padding: 4rem 2rem;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilos para las secciones... */
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .link-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 40px rgba(0, 255, 136, 0.3);
+        }
+
+        .link-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .link-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .link-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .link-url {
+            color: var(--primary-color);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-form {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 8px;
+            color: var(--bg-dark);
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
+        }
+    </style>
 </head>
 <body>
     <!-- Navegación -->
@@ -12,9 +242,9 @@
         <div class="nav-container">
             <div class="logo">📈 TradingHub</div>
             <ul class="nav-links">
-                <li><a href="#inicio" class="nav-link active" data-section="inicio">Inicio</a></li>
-                <li><a href="#enlaces" class="nav-link" data-section="enlaces">Enlaces</a></li>
-                <li><a href="#contactos" class="nav-link" data-section="contactos">Contactos</a></li>
+                <li><a onclick="showSection('inicio')" class="nav-link active">Inicio</a></li>
+                <li><a onclick="showSection('enlaces')" class="nav-link">Enlaces</a></li>
+                <li><a onclick="showSection('contactos')" class="nav-link">Contactos</a></li>
             </ul>
         </div>
     </nav>
@@ -27,37 +257,6 @@
                 <div class="hero-content">
                     <h1 class="hero-title">Bienvenido al Futuro del Trading</h1>
                     <p class="hero-subtitle">Tu plataforma definitiva para análisis y estrategias financieras</p>
-                    
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-icon">📊</div>
-                            <div class="stat-value">$2.4M</div>
-                            <div class="stat-label">Volumen Diario</div>
-                            <span class="stat-change positive">+12.5%</span>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">🚀</div>
-                            <div class="stat-value">1,847</div>
-                            <div class="stat-label">Traders Activos</div>
-                            <span class="stat-change positive">+8.3%</span>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">💹</div>
-                            <div class="stat-value">94.2%</div>
-                            <div class="stat-label">Tasa de Éxito</div>
-                            <span class="stat-change positive">+2.1%</span>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">⚡</div>
-                            <div class="stat-value">0.03s</div>
-                            <div class="stat-label">Latencia</div>
-                            <span class="stat-change negative">-15%</span>
-                        </div>
-                    </div>
-
-                    <div class="chart-container">
-                        <div class="chart-line"></div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -65,13 +264,9 @@
         <!-- Sección Enlaces -->
         <section id="enlaces" class="section">
             <div class="container">
-                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--primary-color);">
                     Recursos de Trading
                 </h2>
-                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">
-                    Accede a las mejores herramientas y plataformas del mercado
-                </p>
-
                 <div class="links-grid">
                     <div class="link-card">
                         <div class="link-icon">📈</div>
@@ -91,24 +286,6 @@
                         <p class="link-description">Cursos y tutoriales para mejorar tus habilidades de trading.</p>
                         <a href="#" class="link-url">Comenzar →</a>
                     </div>
-                    <div class="link-card">
-                        <div class="link-icon">💼</div>
-                        <h3 class="link-title">Broker Partners</h3>
-                        <p class="link-description">Los mejores brokers con spreads competitivos y ejecución rápida.</p>
-                        <a href="#" class="link-url">Ver brokers →</a>
-                    </div>
-                    <div class="link-card">
-                        <div class="link-icon">🤖</div>
-                        <h3 class="link-title">Trading Automático</h3>
-                        <p class="link-description">Sistemas de trading algorítmico y bots automatizados.</p>
-                        <a href="#" class="link-url">Explorar →</a>
-                    </div>
-                    <div class="link-card">
-                        <div class="link-icon">📊</div>
-                        <h3 class="link-title">Market Scanner</h3>
-                        <p class="link-description">Escanea múltiples mercados en busca de las mejores oportunidades.</p>
-                        <a href="#" class="link-url">Escanear →</a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -116,56 +293,54 @@
         <!-- Sección Contactos -->
         <section id="contactos" class="section">
             <div class="container">
-                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--primary-color);">
                     Contacto
                 </h2>
-                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">
-                    Conecta con nuestro equipo de expertos
-                </p>
-
-                <div class="contact-container">
-                    <form class="contact-form" onsubmit="handleSubmit(event)">
-                        <div class="form-group">
-                            <label for="name">Nombre Completo</label>
-                            <input type="text" id="name" name="name" required placeholder="Tu nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Asunto</label>
-                            <input type="text" id="subject" name="subject" required placeholder="¿En qué podemos ayudarte?">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" required placeholder="Describe tu consulta..."></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
-                    </form>
-
-                    <div class="contact-info">
-                        <div class="info-item">
-                            <div class="info-icon">📧</div>
-                            <div class="info-label">Email</div>
-                            <div class="info-value">info@tradinghub.com</div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">📱</div>
-                            <div class="info-label">Teléfono</div>
-                            <div class="info-value">+1 234 567 890</div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">📍</div>
-                            <div class="info-label">Ubicación</div>
-                            <div class="info-value">New York, USA</div>
-                        </div>
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Nombre Completo</label>
+                        <input type="text" id="name" name="name" required placeholder="Tu nombre">
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" required placeholder="Describe tu consulta..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
             </div>
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script>
+        // Función simple para cambiar secciones
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Quitar active de todos los enlaces
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Mostrar la sección seleccionada
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Agregar active al enlace clickeado
+            event.target.classList.add('active');
+        }
+
+        // Manejo del formulario
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Mensaje enviado correctamente');
+            event.target.reset();
+        }
+    </script>
 </body>
 </html>
