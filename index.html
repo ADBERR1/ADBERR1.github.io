@@ -89,6 +89,7 @@
             margin-top: 80px;
             position: relative;
             z-index: 2;
+            padding-bottom: 80px; /* Espacio para el footer */
         }
 
         .section {
@@ -131,6 +132,23 @@
             font-size: 1.5rem;
             color: var(--text-secondary);
             margin-bottom: 3rem;
+        }
+
+        /* NUEVO: Estilo para la imagen */
+        .hero-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 2rem auto;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.3);
+            border: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 25px 70px rgba(0, 255, 136, 0.4);
         }
 
         .hero-subtitle2 {
@@ -281,6 +299,57 @@
             box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
         }
 
+        /* NUEVO: Estilos para el Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(20, 25, 37, 0.98);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-color);
+            padding: 1rem 0;
+            z-index: 999;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-text span {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
         /* ============================================
            RESPONSIVE DESIGN - PARA TODOS LOS DISPOSITIVOS
            ============================================ */
@@ -361,10 +430,22 @@
             
             main {
                 margin-top: 70px;
+                padding-bottom: 70px; /* Ajustado para footer móvil */
             }
             
             nav {
                 padding: 0.8rem 0;
+            }
+
+            /* Footer responsive */
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                padding: 0 1rem;
+            }
+
+            .footer-links {
+                gap: 1rem;
             }
         }
 
@@ -430,6 +511,12 @@
                 padding: 0.8rem 1.5rem;
                 font-size: 1rem;
             }
+
+            /* Imagen responsive */
+            .hero-image {
+                max-width: 90%;
+                margin: 1.5rem auto;
+            }
         }
 
         /* Móviles pequeños */
@@ -455,6 +542,19 @@
             .logo {
                 font-size: 1rem;
             }
+
+            /* Footer para móviles pequeños */
+            footer {
+                padding: 0.8rem 0;
+            }
+
+            .footer-text {
+                font-size: 0.8rem;
+            }
+
+            .footer-links a {
+                font-size: 0.8rem;
+            }
         }
 
         /* Orientación horizontal en móviles */
@@ -478,6 +578,12 @@
                 font-size: 0.9rem;
                 margin-bottom: 1rem;
             }
+
+            .hero-image {
+                margin: 1rem auto;
+                max-height: 200px;
+                object-fit: cover;
+            }
         }
 
         /* Pantallas ultra anchas */
@@ -497,6 +603,10 @@
             .hero-subtitle2 {
                 font-size: 1.3rem;
                 max-width: 900px;
+            }
+
+            .hero-image {
+                max-width: 700px;
             }
         }
 
@@ -531,6 +641,10 @@
                 display: flex;
                 align-items: center;
             }
+
+            .hero-image:hover {
+                transform: none;
+            }
         }
     </style>
 </head>
@@ -555,6 +669,12 @@
                 <div class="hero-content">
                     <h1 class="hero-title">Atlas University</h1>
                     <p class="hero-subtitle">Tu camino hacia la libertad financiera</p>
+                    
+                    <!-- NUEVO: Imagen agregada -->
+                    <img src="https://via.placeholder.com/600x400/0a0e1a/00ff88?text=Atlas+University" 
+                         alt="Atlas University - Trading Education" 
+                         class="hero-image">
+                    
                     <p class="hero-subtitle2">
                         Atlas University nació con una misión clara: formar personas verdaderamente rentables.
                         Aquí no solo aprendes trading, aprendes a entender por qué el precio hace lo que hace — porque la rentabilidad real nace del conocimiento profundo, no de la suerte.
@@ -577,7 +697,7 @@
                         Y lo mejor: si en 6 meses no entiendes por qué el precio se mueve como lo hace, te devolvemos tu dinero.
                         Así de seguros estamos del valor que entregamos.
                     </p>
-                    <p class="hero-subtitle2">
+                     <p class="hero-subtitle2">
                         📈 Atlas University es más que una academia; es una comunidad de jóvenes que buscan independencia, conocimiento y libertad financiera.
                     </p>
                     <p class="hero-subtitle2">
@@ -615,8 +735,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Sección Contactos -->
+<!-- Sección Contactos -->
         <section id="contactos" class="section">
             <div class="container">
                 <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--primary-color);">
@@ -646,9 +765,23 @@
                     <button type="submit" class="submit-btn">Enviar Mensaje</button>
                 </form>
 
-  </div>
+            </div>
         </section>
     </main>
+
+<!-- NUEVO: Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">
+                © 2024 Atlas University | Creado con ❤️ por <span>Tu Nombre</span>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Términos</a></li>
+                <li><a href="#">Redes</a></li>
+            </ul>
+        </div>
+    </footer>
 
     <script>
         // Función simple para cambiar secciones
