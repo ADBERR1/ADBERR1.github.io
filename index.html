@@ -122,7 +122,7 @@
 
         .hero-title {
             font-size: 4rem;
-            margin-bottom: 2rem; /* Aumentado de 1rem a 2rem para alejarlo de la barra de navegación */
+            margin-bottom: 2rem;
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -131,7 +131,7 @@
         .hero-subtitle {
             font-size: 1.5rem;
             color: var(--text-secondary);
-            margin-bottom: 1.5rem; /* Reducido de 3rem a 1.5rem para acercar la imagen */
+            margin-bottom: 1.5rem;
         }
 
         /* NUEVO: Estilo para la imagen */
@@ -344,10 +344,159 @@
             text-decoration: none;
             font-size: 0.9rem;
             transition: color 0.3s ease;
+            cursor: pointer;
         }
 
         .footer-links a:hover {
             color: var(--primary-color);
+        }
+
+        /* NUEVO: Estilos para las secciones adicionales */
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .section-content h3 {
+            color: var(--primary-color);
+            margin: 2rem 0 1rem 0;
+            font-size: 1.3rem;
+        }
+
+        .section-content p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .section-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .section-content li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .ultima-actualizacion {
+            margin-top: 3rem;
+            padding: 1rem;
+            background: rgba(0, 255, 136, 0.1);
+            border-left: 3px solid var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .aviso-legal {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 51, 102, 0.1);
+            border: 1px solid var(--danger-color);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .aviso-legal p {
+            color: var(--danger-color);
+            font-size: 0.9rem;
+        }
+
+        /* Checkbox para política de privacidad */
+        .checkbox-privacidad {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .checkbox-privacidad input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .checkbox-privacidad label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .checkbox-privacidad a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .checkbox-privacidad a:hover {
+            text-decoration: underline;
+        }
+
+        /* NUEVO: Estilos para sección de Redes */
+        .redes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .red-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .red-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 40px rgba(0, 255, 136, 0.3);
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .red-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2.5rem;
+        }
+
+        .red-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .red-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .red-username {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
         }
 
         /* ============================================
@@ -430,7 +579,7 @@
 
             main {
                 margin-top: 70px;
-                padding-bottom: 70px; /* Ajustado para footer móvil */
+                padding-bottom: 70px;
             }
 
             nav {
@@ -446,6 +595,15 @@
 
             .footer-links {
                 gap: 1rem;
+            }
+
+            .section-content {
+                padding: 0 1rem;
+            }
+
+            .redes-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
         }
 
@@ -516,6 +674,18 @@
             .hero-image {
                 max-width: 90%;
                 margin: 1.5rem auto;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.8rem;
+            }
+
+            .red-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
             }
         }
 
@@ -645,9 +815,14 @@
             .hero-image:hover {
                 transform: none;
             }
+
+            .red-card:hover {
+                transform: none;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Navegación -->
     <nav>
@@ -661,7 +836,7 @@
         </div>
     </nav>
 
-    <!-- Contenido Principal -->
+<!-- Contenido Principal -->
     <main>
         <!-- Sección Inicio -->
         <section id="inicio" class="section active">
@@ -671,10 +846,9 @@
                     <p class="hero-subtitle">Tu camino hacia la libertad financiera</p>
 
                     <!-- NUEVO: Imagen agregada -->
-                    <img <!-- Tu nueva imagen -->
-<img src="img/Atlas-University.png" 
-     alt="Atlas University - Trading Education" 
-     class="hero-image">
+                    <img src="img/Atlas-University.png" 
+                         alt="Atlas University - Trading Education" 
+                         class="hero-image">
 
                     <p class="hero-subtitle2">
                         Atlas University nació con una misión clara: formar personas verdaderamente rentables.
@@ -708,7 +882,7 @@
             </div>
         </section>
 
-        <!-- Sección Enlaces -->
+<!-- Sección Enlaces -->
         <section id="enlaces" class="section">
             <div class="container">
                 <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--primary-color);">
@@ -739,6 +913,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                 </div>
             </div>
         </section>
+
 <!-- Sección Contactos -->
         <section id="contactos" class="section">
             <div class="container">
@@ -762,29 +937,275 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <label for="message">Mensaje</label>
                         <textarea id="message" name="message" required placeholder="Cuéntame! ¿En qué te puedo ayudar?"></textarea>
                     </div>
+                    
+                    <!-- Checkbox de política de privacidad -->
+                    <div class="checkbox-privacidad">
+                        <input type="checkbox" id="privacidad-check" required>
+                        <label for="privacidad-check">Acepto la <a href="#" onclick="showSection('privacidad'); return false;">política de privacidad</a> y los <a href="#" onclick="showSection('terminos'); return false;">términos y condiciones</a></label>
+                    </div>
+                    
                     <button type="submit" class="submit-btn">Enviar Mensaje</button>
                 </form>
 
             </div>
         </section>
-    </main>
 
-<!-- NUEVO: Footer -->
+<!-- SECCIÓN: Política de Privacidad -->
+        <section id="privacidad" class="section">
+            <div class="container">
+                <h2 class="section-title">Política de Privacidad</h2>
+                <div class="section-content">
+                    
+                    <h3>1. Información General</h3>
+                    <p>Atlas University se compromete a proteger la privacidad de sus usuarios. Esta política describe cómo recopilamos, usamos y protegemos tu información personal.</p>
+                    
+                    <h3>2. Información que Recopilamos</h3>
+                    <ul class="lista-guiones">
+                        <li><strong>Datos Personales:</strong> Nombre, correo electrónico, teléfono</li>
+                        <li><strong>Datos de Pago:</strong> Información de tarjetas (procesada por terceros seguros)</li>
+                        <li><strong>Datos de Navegación:</strong> IP, cookies, páginas visitadas</li>
+                        <li><strong>Datos de Servicio:</strong> Progreso en cursos, participación en reuniones</li>
+                    </ul>
+                    
+                    <h3>3. Uso de tu Información</h3>
+                    <p>Utilizamos tu información para:</p>
+                    <ul class="lista-guiones">
+                        <li>Proporcionar acceso a nuestros cursos y servicios</li>
+                        <li>Enviar señales de trading y material educativo</li>
+                        <li>Procesar pagos de membresías</li>
+                        <li>Comunicarnos contigo sobre tu cuenta</li>
+                        <li>Mejorar nuestros servicios y contenido</li>
+                    </ul>
+                    
+                    <h3>4. Compartir de Información</h3>
+                    <p>No vendemos, alquilamos ni compartimos tu información personal con terceros, excepto:</p>
+                    <ul class="lista-guiones">
+                        <li><strong>Procesadores de Pago:</strong> Stripe, PayPal para transacciones seguras</li>
+                        <li><strong>Servicios de Email:</strong> Para enviar comunicaciones</li>
+                        <li><strong>Requerimientos Legales:</strong> Cuando la ley lo exija</li>
+                    </ul>
+                    
+                    <h3>5. Seguridad de Datos</h3>
+                    <p>Implementamos medidas de seguridad包括:</p>
+                    <ul class="lista-guiones">
+                        <li>Cifrado SSL de 256 bits</li>
+                        <li>Servidores seguros y monitoreados</li>
+                        <li>Acceso limitado al personal autorizado</li>
+                        <li>Actualizaciones regulares de seguridad</li>
+                    </ul>
+
+                    <h3>6. Cookies</h3>
+                    <p>Usamos cookies para:</p>
+                    <ul class="lista-guiones">
+                        <li>Mantener tu sesión activa</li>
+                        <li>Recordar tus preferencias</li>
+                        <li>Analizar el tráfico del sitio</li>
+                        <li>Personalizar tu experiencia</li>
+                    </ul>
+                    
+                    <h3>7. Tus Derechos</h3>
+                    <p>Tienes derecho a:</p>
+                    <ul class="lista-guiones">
+                        <li>Saber qué datos tenemos sobre ti</li>
+                        <li>Corregir información incorrecta</li>
+                        <li>Solicitar eliminación de tus datos</li>
+                        <li>Exportar tu información</li>
+                        <li>Cancelar tu membresía en cualquier momento</li>
+                    </ul>
+                    
+                    <h3>8. Menores de Edad</h3>
+                    <p>Nuestros servicios están dirigidos a mayores de 18 años. No recopilamos información de menores intencionalmente.</p>
+                    
+                    <h3>9. Cambios a esta Política</h3>
+                    <p>Podemos actualizar esta política ocasionalmente. Te notificaremos cambios importantes por email.</p>
+                    
+                    <h3>10. Contacto</h3>
+                    <p>Para ejercer tus derechos o preguntas sobre privacidad:</p>
+                    <ul class="lista-guiones">
+                        <li>Email: privacy@atlasuniversity.com</li>
+                        <li>Teléfono: +1 234 567 890</li>
+                        <li>Respuesta en 48 horas hábiles</li>
+                    </ul>
+                    
+                    <div class="ultima-actualizacion">
+                        <p><strong>Última actualización:</strong> <span id="fecha-actualizacion-privacidad"></span></p>
+                    </div>
+
+                    <div class="aviso-legal">
+                        <p><strong>Nota importante:</strong> Esta política de privacidad es informativa. Para asesoría legal específica, consulta con un abogado especializado en protección de datos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- SECCIÓN: Términos y Condiciones -->
+        <section id="terminos" class="section">
+            <div class="container">
+                <h2 class="section-title">Términos y Condiciones</h2>
+                <div class="section-content">
+                    
+                    <h3>1. Aceptación de los Términos</h3>
+                    <p>Al acceder y utilizar Atlas University, aceptas estos términos y condiciones en su totalidad. Si no estás de acuerdo con alguno de estos términos, no debes utilizar nuestros servicios.</p>
+                    
+                    <h3>2. Descripción del Servicio</h3>
+                    <p>Atlas University es una plataforma educativa que ofrece:</p>
+                    <ul class="lista-guiones">
+                        <li>Cursos de trading y educación financiera</li>
+                        <li>Señales de trading con fines educativos</li>
+                        <li>Comunidad de traders y mentoría</li>
+                        <li>Recursos educativos y herramientas</li>
+                    </ul>
+                    
+                    <h3>3. Responsabilidades del Usuario</h3>
+                    <p>Como usuario, te comprometes a:</p>
+                    <ul class="lista-guiones">
+                        <li>Proporcionar información veraz y actualizada</li>
+                        <li>Mantener confidenciales tus credenciales de acceso</li>
+                        <li>Utilizar el servicio para fines educativos únicamente</li>
+                        <li>No compartir contenido sin autorización</li>
+                        <li>Respetar a otros miembros de la comunidad</li>
+                    </ul>
+                    
+                    <h3>4. Pagos y Membresías</h3>
+                    <p>Respecto a los pagos:</p>
+                    <ul class="lista-guiones">
+                        <li>Las membresías se renuevan automáticamente</li>
+                        <li>Los pagos se procesan a través de plataformas seguras</li>
+                        <li>No hay reembolsos parciales del mes en curso</li>
+                        <li>Los precios pueden cambiar con previo aviso</li>
+                        <li>Garantía de 6 meses según condiciones específicas</li>
+                    </ul>
+  
+                    <h3>5. Propiedad Intelectual</h3>
+                    <p>Todo el contenido de Atlas University incluye:</p>
+                    <ul class="lista-guiones">
+                        <li>Derechos de autor protegidos por ley</li>
+                        <li>Prohibida la reproducción sin autorización</li>
+                        <li>Uso personal limitado a miembros activos</li>
+                        <li>El contenido permanece propiedad de Atlas University</li>
+                    </ul>
+                    
+                    <h3>6. Limitación de Responsabilidad</h3>
+                    <p>Atlas University no es responsable de:</p>
+                    <ul class="lista-guiones">
+                        <li>Decisiones de trading tomadas por los usuarios</li>
+                        <li>Pérdidas financieras resultantes del trading</li>
+                        <li>Disponibilidad del servicio 100% del tiempo</li>
+                        <li>Contenido de terceros enlazado</li>
+                    </ul>
+                    
+                    <h3>7. Riesgos del Trading</h3>
+                    <p>Debes entender que:</p>
+                    <ul class="lista-guiones">
+                        <li>El trading involucra riesgo financiero significativo</li>
+                        <li>Puedes perder más que tu inversión inicial</li>
+                        <li>Las señales son educativas, no garantías</li>
+                        <li>Debes operar solo con capital que puedas perder</li>
+                    </ul>
+                    
+                    <h3>8. Terminación del Servicio</h3>
+                    <p>Nos reservamos el derecho de:</p>
+                    <ul class="lista-guiones">
+                        <li>Suspender cuentas por violación de términos</li>
+                        <li>Terminar servicios con previo aviso</li>
+                        <li>Cancelar membresías sin reembolso por fraude</li>
+                    </ul>
+                    
+                    <h3>9. Ley Aplicable</h3>
+                    <p>Estos términos se rigen por las leyes de [Tu País/Jurisdicción]. Cualquier disputa se resolverá mediante arbitraje.</p>
+                    <h3>10. Modificaciones</h3>
+                    <p>Podemos modificar estos términos en cualquier momento. Los cambios entrarán en efecto inmediatamente después de su publicación.</p>
+                    
+                    <div class="ultima-actualizacion">
+                        <p><strong>Última actualización:</strong> <span id="fecha-actualizacion-terminos"></span></p>
+                    </div>
+
+                    <div class="aviso-legal">
+                        <p><strong>Nota importante:</strong> Estos términos son un acuerdo legal. Consulta con un abogado si tienes dudas sobre tus derechos y obligaciones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- SECCIÓN: Redes Sociales -->
+        <section id="redes" class="section">
+            <div class="container">
+                <h2 class="section-title">Síguenos en Redes Sociales</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem;">
+                    Conecta con nosotros en nuestras plataformas y mantente al día con todo el contenido educativo
+                </p>
+
+                <div class="redes-grid">
+                    <a href="https://t.me/atlasuniversity" target="_blank" class="red-card">
+                        <div class="red-icon">📱</div>
+                        <div class="red-name">Telegram</div>
+                        <div class="red-description">
+                            Únete a nuestra comunidad gratuita. Comparte ideas, aprende de otros traders y recibe contenido exclusivo diario.
+                        </div>
+                        <div class="red-username">@atlasuniversity</div>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@atlasuniversity" target="_blank" class="red-card">
+                        <div class="red-icon">🎵</div>
+                        <div class="red-name">TikTok</div>
+                        <div class="red-description">
+                            Videos cortos con tips de trading, análisis rápido y contenido educativo entretenido para aprender sobre la marcha.
+                        </div>
+                        <div class="red-username">@atlasuniversity</div>
+                    </a>
+
+                    <a href="https://www.instagram.com/atlasuniversity" target="_blank" class="red-card">
+                        <div class="red-icon">📸</div>
+                        <div class="red-name">Instagram</div>
+                        <div class="red-description">
+                            Detrás de cámaras, infografías educativas, historias con tips diarios y comunidad activa de traders.
+                        </div>
+                        <div class="red-username">@atlasuniversity</div>
+                    </a>
+
+                    <a href="https://twitter.com/atlasuniversity" target="_blank" class="red-card">
+                        <div class="red-icon">🐦</div>
+                        <div class="red-name">Twitter/X</div>
+                        <div class="red-description">
+                            Análisis de mercado en tiempo real, noticias financieras importantes y actualizaciones rápidas de la comunidad.
+                        </div>
+                        <div class="red-username">@atlasuniversity</div>
+                    </a>
+                   <a href="https://www.youtube.com/@atlasuniversity" target="_blank" class="red-card">
+                        <div class="red-icon">🎥</div>
+                        <div class="red-name">YouTube</div>
+                        <div class="red-description">
+                            Tutoriales completos, grabaciones de sesiones en vivo, análisis profundo y cursos gratuitos de trading.
+                        </div>
+                        <div class="red-username">@atlasuniversity</div>
+                    </a>
+
+                    <a href="https://discord.gg/atlasuniversity" target="_blank" class="red-card">
+                        <div class="red-icon">🎮</div>
+                        <div class="red-name">Discord</div>
+                        <div class="red-description">
+                            Servidor exclusivo para miembros. Chat en tiempo real, canales temáticos y eventos especiales de la comunidad.
+                        </div>
+                        <div class="red-username">Atlas University</div>
+                    </a>
+                </div>
+
+<!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-text">
                 © 2025 Atlas University | Creado con ❤️ por <span>Adberry</span>
             </div>
             <ul class="footer-links">
-                <li><a href="#">Privacidad</a></li>
-                <li><a href="#">Términos</a></li>
-                <li><a href="#">Redes</a></li>
+                <li><a href="#" onclick="showSection('privacidad'); return false;">Privacidad</a></li>
+                <li><a href="#" onclick="showSection('terminos'); return false;">Términos</a></li>
+                <li><a href="#" onclick="showSection('redes'); return false;">Redes</a></li>
             </ul>
         </div>
     </footer>
 
     <script>
-        // Función simple para cambiar secciones
+        // Función para cambiar secciones
         function showSection(sectionId) {
             // Ocultar todas las secciones
             document.querySelectorAll('.section').forEach(section => {
@@ -799,16 +1220,62 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
             // Mostrar la sección seleccionada
             document.getElementById(sectionId).classList.add('active');
 
-            // Agregar active al enlace clickeado
-            event.target.classList.add('active');
+            // Agregar active al enlace clickeado si está en la navegación principal
+            if (event && event.target && event.target.classList.contains('nav-link')) {
+                event.target.classList.add('active');
+            }
+
+            // Scroll al inicio de la sección
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Manejo del formulario
-        function handleSubmit(event) {
-            event.preventDefault();
-            alert('Mensaje enviado correctamente');
-            event.target.reset();
-        }
+        // Actualizar fechas automáticamente
+        document.addEventListener('DOMContentLoaded', function() {
+            const fecha = new Date().toLocaleDateString('es-ES', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+// Actualizar fecha de privacidad
+            const fechaPrivacidad = document.getElementById('fecha-actualizacion-privacidad');
+            if (fechaPrivacidad) {
+                fechaPrivacidad.textContent = fecha;
+            }
+            
+            // Actualizar fecha de términos
+            const fechaTerminos = document.getElementById('fecha-actualizacion-terminos');
+            if (fechaTerminos) {
+                fechaTerminos.textContent = fecha;
+            }
+        });
+
+        // Efecto de scroll suave para todos los enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = this.getAttribute('href');
+                if (target !== '#') {
+                    const sectionId = target.substring(1);
+                    showSection(sectionId);
+                }
+            });
+        });
     </script>
 </body>
 </html>
+                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(0, 255, 136, 0.1); border-radius: 16px; border: 1px solid var(--primary-color);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🎯 Beneficios de seguirnos</h3>
+                    <ul class="lista-guiones" style="max-width: 600px; margin: 0 auto; text-align: left;">
+                        <li>Contenido exclusivo gratuito</li>
+                        <li>Tips diarios de trading</li>
+                        <li>Sorteos y promociones especiales</li>
+                        <li>Acceso anticipado a nuevos cursos</li>
+                        <li>Comunidad activa y colaborativa</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
