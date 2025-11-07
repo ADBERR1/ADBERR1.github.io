@@ -690,7 +690,7 @@
             }
         }
 
-        /* Móviles medianos */
+            /* Móviles medianos */
         @media (max-width: 480px) {
             .hero-title {
                 font-size: 2rem;
@@ -771,8 +771,7 @@
                 font-size: 2rem;
             }
         }
-
-        /* Móviles pequeños */
+           /* Móviles pequeños */
         @media (max-width: 320px) {
             .hero-title {
                 font-size: 1.8rem;
@@ -839,7 +838,7 @@
             }
         }
 
-        /* Pantallas ultra anchas */
+           /* Pantallas ultra anchas */
         @media (min-width: 1400px) {
             .container {
                 max-width: 1400px;
@@ -910,7 +909,7 @@
 
 <audio id="clickSound" src="click.mp3" preload="auto"></audio>
 
- <!-- ============================================
+<!-- ============================================
          PANTALLA DE CARGA - LOADING SCREEN
          ============================================ -->
     <div class="loading-screen" id="loadingScreen">
@@ -927,7 +926,11 @@
             <ul class="nav-links">
                 <li><a onclick="showSection('inicio')" class="nav-link active">Inicio</a></li>
                 <li><a onclick="showSection('enlaces')" class="nav-link">Enlaces</a></li>
-                <li><a onclick="showSection('contactos')" class="nav-link">Contactos</a></li>
+                <!-- INICIO DEL CAMBIO -->
+                <!-- Línea original eliminada: <li><a onclick="showSection('contactos')" class="nav-link">Contactos</a></li> -->
+                <!-- Línea movida desde el footer: -->
+                <li><a href="#" onclick="showSection('redes'); return false;" class="nav-link">Redes</a></li>
+                <!-- FIN DEL CAMBIO -->
             </ul>
         </div>
     </nav>
@@ -978,7 +981,7 @@
             </div>
         </section>
 
-        <!-- Sección Enlaces -->
+<!-- Sección Enlaces -->
         <section id="enlaces" class="section">
             <div class="container">
                 <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--primary-color);">
@@ -1033,28 +1036,29 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <label for="message">Mensaje</label>
                         <textarea id="message" name="message" required placeholder="Cuéntame! ¿En qué te puedo ayudar?"></textarea>
                     </div>
-                    
+
                     <!-- Checkbox de política de privacidad -->
                     <div class="checkbox-privacidad">
                         <input type="checkbox" id="privacidad-check" required>
                         <label for="privacidad-check">Acepto la <a href="#" onclick="showSection('privacidad'); return false;">política de privacidad</a> y los <a href="#" onclick="showSection('terminos'); return false;">términos y condiciones</a></label>
                     </div>
-                    
+
                     <button type="submit" class="submit-btn">Enviar Mensaje</button>
                 </form>
 
             </div>
         </section>
 
+
 <!-- SECCIÓN: Política de Privacidad -->
         <section id="privacidad" class="section">
             <div class="container">
                 <h2 class="section-title">Política de Privacidad</h2>
                 <div class="section-content">
-                    
+
                     <h3>1. Información General</h3>
                     <p>Atlas University se compromete a proteger la privacidad de sus usuarios. Esta política describe cómo recopilamos, usamos y protegemos tu información personal.</p>
-                    
+
                     <h3>2. Información que Recopilamos</h3>
                     <ul class="lista-guiones">
                         <li><strong>Datos Personales:</strong> Nombre, correo electrónico, teléfono</li>
@@ -1062,7 +1066,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li><strong>Datos de Navegación:</strong> IP, cookies, páginas visitadas</li>
                         <li><strong>Datos de Servicio:</strong> Progreso en cursos, participación en reuniones</li>
                     </ul>
-                    
+
                     <h3>3. Uso de tu Información</h3>
                     <p>Utilizamos tu información para:</p>
                     <ul class="lista-guiones">
@@ -1072,7 +1076,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li>Comunicarnos contigo sobre tu cuenta</li>
                         <li>Mejorar nuestros servicios y contenido</li>
                     </ul>
-                    
+
                     <h3>4. Compartir de Información</h3>
                     <p>No vendemos, alquilamos ni compartimos tu información personal con terceros, excepto:</p>
                     <ul class="lista-guiones">
@@ -1080,7 +1084,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li><strong>Servicios de Email:</strong> Para enviar comunicaciones</li>
                         <li><strong>Requerimientos Legales:</strong> Cuando la ley lo exija</li>
                     </ul>
-                    
+
                     <h3>5. Seguridad de Datos</h3>
                     <p>Implementamos medidas de seguridad包括:</p>
                     <ul class="lista-guiones">
@@ -1089,7 +1093,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li>Acceso limitado al personal autorizado</li>
                         <li>Actualizaciones regulares de seguridad</li>
                     </ul>
-                    
+
                     <h3>6. Cookies</h3>
                     <p>Usamos cookies para:</p>
                     <ul class="lista-guiones">
@@ -1098,7 +1102,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li>Analizar el tráfico del sitio</li>
                         <li>Personalizar tu experiencia</li>
                     </ul>
-                    
+
                     <h3>7. Tus Derechos</h3>
                     <p>Tienes derecho a:</p>
                     <ul class="lista-guiones">
@@ -1108,13 +1112,13 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li>Exportar tu información</li>
                         <li>Cancelar tu membresía en cualquier momento</li>
                     </ul>
-                    
+
                     <h3>8. Menores de Edad</h3>
                     <p>Nuestros servicios están dirigidos a mayores de 18 años. No recopilamos información de menores intencionalmente.</p>
-                    
+
                     <h3>9. Cambios a esta Política</h3>
                     <p>Podemos actualizar esta política ocasionalmente. Te notificaremos cambios importantes por email.</p>
-                    
+
                     <h3>10. Contacto</h3>
                     <p>Para ejercer tus derechos o preguntas sobre privacidad:</p>
                     <ul class="lista-guiones">
@@ -1133,16 +1137,15 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                 </div>
             </div>
         </section>
-
- <!-- SECCIÓN: Términos y Condiciones -->
+<!-- SECCIÓN: Términos y Condiciones -->
         <section id="terminos" class="section">
             <div class="container">
                 <h2 class="section-title">Términos y Condiciones</h2>
                 <div class="section-content">
-                    
+
                     <h3>1. Aceptación de los Términos</h3>
                     <p>Al acceder y utilizar Atlas University, aceptas estos términos y condiciones en su totalidad. Si no estás de acuerdo con alguno de estos términos, no debes utilizar nuestros servicios.</p>
-                    
+
                     <h3>2. Descripción del Servicio</h3>
                     <p>Atlas University es una plataforma educativa que ofrece:</p>
                     <ul class="lista-guiones">
@@ -1151,7 +1154,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li>Comunidad de traders y mentoría</li>
                         <li>Recursos educativos y herramientas</li>
                     </ul>
-                    
+
                     <h3>3. Responsabilidades del Usuario</h3>
                     <p>Como usuario, te comprometes a:</p>
                     <ul class="lista-guiones">
@@ -1161,7 +1164,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li>No compartir contenido sin autorización</li>
                         <li>Respetar a otros miembros de la comunidad</li>
                     </ul>
-                    
+
                     <h3>4. Pagos y Membresías</h3>
                     <p>Respecto a los pagos:</p>
                     <ul class="lista-guiones">
@@ -1171,7 +1174,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li>Los precios pueden cambiar con previo aviso</li>
                         <li>Garantía de 6 meses según condiciones específicas</li>
                     </ul>
-                    
+
                     <h3>5. Propiedad Intelectual</h3>
                     <p>Todo el contenido de Atlas University incluye:</p>
                     <ul class="lista-guiones">
@@ -1180,7 +1183,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li>Uso personal limitado a miembros activos</li>
                         <li>El contenido permanece propiedad de Atlas University</li>
                     </ul>
-                    
+
                     <h3>6. Limitación de Responsabilidad</h3>
                     <p>Atlas University no es responsable de:</p>
                     <ul class="lista-guiones">
@@ -1189,7 +1192,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li>Disponibilidad del servicio 100% del tiempo</li>
                         <li>Contenido de terceros enlazado</li>
                     </ul>
-                    
+
                     <h3>7. Riesgos del Trading</h3>
                     <p>Debes entender que:</p>
                     <ul class="lista-guiones">
@@ -1198,7 +1201,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li>Las señales son educativas, no garantías</li>
                         <li>Debes operar solo con capital que puedas perder</li>
                     </ul>
-                    
+
                     <h3>8. Terminación del Servicio</h3>
                     <p>Nos reservamos el derecho de:</p>
                     <ul class="lista-guiones">
@@ -1206,13 +1209,13 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li>Terminar servicios con previo aviso</li>
                         <li>Cancelar membresías sin reembolso por fraude</li>
                     </ul>
-                    
+
                     <h3>9. Ley Aplicable</h3>
                     <p>Estos términos se rigen por las leyes de [Tu País/Jurisdicción]. Cualquier disputa se resolverá mediante arbitraje.</p>
-                    
+
                     <h3>10. Modificaciones</h3>
                     <p>Podemos modificar estos términos en cualquier momento. Los cambios entrarán en efecto inmediatamente después de su publicación.</p>
-                    
+
                     <div class="ultima-actualizacion">
                         <p><strong>Última actualización:</strong> <span id="fecha-actualizacion-terminos"></span></p>
                     </div>
@@ -1298,7 +1301,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                         <li>Comunidad activa y colaborativa</li>
                     </ul>
                 </div>
-            </div>
+                </div>
         </section>
     </main>
 
@@ -1311,7 +1314,11 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
             <ul class="footer-links">
                 <li><a href="#" onclick="showSection('privacidad'); return false;">Privacidad</a></li>
                 <li><a href="#" onclick="showSection('terminos'); return false;">Términos</a></li>
-                <li><a href="#" onclick="showSection('redes'); return false;">Redes</a></li>
+                <!-- INICIO DEL CAMBIO -->
+                <!-- Línea original eliminada: <li><a href="#" onclick="showSection('redes'); return false;">Redes</a></li> -->
+                <!-- Línea movida desde la navegación superior: -->
+                <li><a onclick="showSection('contactos')" class="nav-link">Contactos</a></li>
+                <!-- FIN DEL CAMBIO -->
             </ul>
         </div>
     </footer>
@@ -1329,7 +1336,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
                 const loadingScreen = document.getElementById('loadingScreen');
                 if (loadingScreen) {
                     loadingScreen.classList.add('fade-out');
-                    
+
                     // Remover completamente después de la animación
                     setTimeout(function() {
                         loadingScreen.style.display = 'none';
@@ -1375,7 +1382,7 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
             if (fechaPrivacidad) {
                 fechaPrivacidad.textContent = fecha;
             }
-            
+
             // Actualizar fecha de términos
             const fechaTerminos = document.getElementById('fecha-actualizacion-terminos');
             if (fechaTerminos) {
@@ -1409,7 +1416,11 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
   // Añadimos el evento 'click' a todo el cuerpo de la página.
   // ¡Esto es suficiente para escritorio Y móviles!
   document.body.addEventListener('click', playClickSound);
- 
+
     </script>
 </body>
 </html>
+                
+
+
+     
