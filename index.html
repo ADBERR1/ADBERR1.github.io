@@ -7,9 +7,9 @@
 
     <style>
 
-        /* ============================================
-           PANTALLA DE CARGA - LOADING SCREEN
-           ============================================ */
+        /* ======================
+           PANTALLA DE CARGA 
+           ====================== */
         .loading-screen {
             position: fixed;
             top: 0;
@@ -89,7 +89,7 @@
             }
         }
 
-        /* Copia todo el CSS de styles.css aquí */
+        /*CSS styles.css  */
         * {
             margin: 0;
             padding: 0;
@@ -115,7 +115,7 @@
             overflow-x: hidden;
         }
 
-        /* Todo el CSS restante... */
+        /* CSS de nav */
         nav {
             position: fixed;
             top: 0;
@@ -218,7 +218,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /* NUEVO: Estilo para la imagen */
+        /* IMG*/
         .hero-image {
             width: 100%;
             max-width: 600px;
@@ -383,7 +383,7 @@
             box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
         }
 
-        /* NUEVO: Estilos para el Footer */
+        /* Estilos de Footer */
         footer {
             position: fixed;
             bottom: 0;
@@ -435,7 +435,7 @@
             color: var(--primary-color);
         }
 
-        /* NUEVO: Estilos para las secciones adicionales */
+        /* Estilos para las secciones adicionales */
         .section-content {
             max-width: 800px;
             margin: 0 auto;
@@ -904,9 +904,9 @@
             }
         }
 
-        /* ============================================
-           CSS AÑADIDO PARA TUS ICONOS PERSONALIZADOS
-           ============================================ */
+        /* ==================
+           CSS PARA ICONOS
+           ==================*/
         .link-icon img,
         .red-icon img {
             width: 60%; /* Ajusta el tamaño del icono dentro del círculo */
@@ -922,9 +922,9 @@
 
 <audio id="clickSound" src="click.mp3" preload="auto"></audio>
 
-<!-- ============================================
+<!-- =========================================
          PANTALLA DE CARGA - LOADING SCREEN
-         ============================================ -->
+         ======================================== -->
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-content">
             <div class="loading-shield">🛡️</div>
@@ -1145,6 +1145,7 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
                 </div>
             </div>
         </section>
+
 <!-- SECCIÓN: Términos y Condiciones -->
         <section id="terminos" class="section">
             <div class="container">
@@ -1322,9 +1323,9 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
         </div>
     </footer>
 
-<!-- ============================================
-         JAVASCRIPT - CONTROL DE PANTALLA DE CARGA
-         ============================================ -->
+<!-- ======================================
+         JAVASCRIPT - PANTALLA DE CARGA
+         ===================================== -->
     <script>
         // ============================================
         // CONTROL DE PANTALLA DE CARGA
@@ -1401,7 +1402,7 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
             });
         });
 
-   // Obtenemos el elemento de audio para tener su fuente lista
+   // Elemento de audio
   const clickSoundElement = document.getElementById('clickSound');
 
   // Función para reproducir el sonido
@@ -1412,8 +1413,8 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
     });
   }
 
-  // Añadimos el evento 'click' a todo el cuerpo de la página.
-  // ¡Esto es suficiente para escritorio Y móviles!
+  // Evento 'click' a todo el cuerpo de la página.
+  // Móvil y escritorio
   document.body.addEventListener('click', playClickSound);
 
     </script>
