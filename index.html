@@ -1395,25 +1395,20 @@ Comparte ideas, aprende de otros traders y recibe información valiosa que te ay
             });
         });
 
-  // Obtenemos el elemento de audio para tener su fuente lista
+   // Obtenemos el elemento de audio para tener su fuente lista
   const clickSoundElement = document.getElementById('clickSound');
 
   // Función para reproducir el sonido
   function playClickSound() {
-    // Creamos una nueva instancia del sonido cada vez.
-    // Esto permite que los sonidos se puedan reproducir rápidamente
-    // incluso si el anterior no ha terminado.
     const sound = new Audio(clickSoundElement.src);
     sound.play().catch(error => {
-      // Esto es por si el navegador bloquea el audio (raro en este caso, pero bueno tenerlo)
       console.log("La reproducción del sonido fue bloqueada por el navegador.");
     });
   }
 
-  // Añadimos el evento 'click' y 'touchstart' a todo el cuerpo de la página
-  ['click', 'touchstart'].forEach(eventType => {
-    document.body.addEventListener(eventType, playClickSound);
-  });
+  // Añadimos el evento 'click' a todo el cuerpo de la página.
+  // ¡Esto es suficiente para escritorio Y móviles!
+  document.body.addEventListener('click', playClickSound);
  
     </script>
 </body>
