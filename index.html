@@ -753,8 +753,9 @@
                 padding: 0.8rem 1.5rem;
                 font-size: 1rem;
             }
+        }
 
-            /* Imagen responsive */
+        /* Imagen responsive */
             .hero-image {
                 max-width: 90%;
                 margin: 1.5rem auto;
@@ -838,8 +839,7 @@
                 object-fit: cover;
             }
         }
-
-           /* Pantallas ultra anchas */
+/* Pantallas ultra anchas */
         @media (min-width: 1400px) {
             .container {
                 max-width: 1400px;
@@ -902,6 +902,17 @@
             .red-card:hover {
                 transform: none;
             }
+        }
+
+        /* ============================================
+           CSS AÑADIDO PARA TUS ICONOS PERSONALIZADOS
+           ============================================ */
+        .link-icon img,
+        .red-icon img {
+            width: 60%; /* Ajusta el tamaño del icono dentro del círculo */
+            height: auto;
+            /* Si tus iconos son negros, esta línea los hará blancos. Si ya son blancos, bórrala. */
+            filter: brightness(0) invert(1); 
         }
 
     </style>
@@ -989,7 +1000,7 @@
                 <h2 class="section-title">Recursos de Trading</h2>
                 <div class="links-grid">
                     <div class="link-card">
-                        <div class="link-icon">🎓</div>
+                        <div class="link-icon"><img src="iconos/skool.svg" alt="Icono Skool"></div>
                         <h3 class="link-title">Atlas University (Skool)</h3>
                         <p class="link-description">💡 Atlas University no es solo una academia, es donde la teoría se convierte en resultados reales 💰
 Aprende trading desde cero, entiende cómo se mueve el mercado.
@@ -997,14 +1008,14 @@ La rentabilidad no se promete… se demuestra.⚡</p>
                         <a href="https://www.skool.com/atlas-university-4961/about?ref=9af2454f711f4f5082209ccbf19aba1a" class="link-url">Ir →</a>
                     </div>
                     <div class="link-card">
-                        <div class="link-icon">⭐</div>
+                        <div class="link-icon"><img src="iconos/telegram.svg" alt="Icono Telegram"></div>
                         <h3 class="link-title">Telegram Comunidad Gratuita</h3>
                         <p class="link-description">🤝 Únete a la comunidad gratuita y forma parte de un grupo donde todos crecemos juntos 🌱
 Aprende de otros traders y recibe información valiosa que te ayudará a avanzar en tu camino.📈</p>
                         <a href="https://t.me/+1jALa9Lf4v9kMjVh" class="link-url">Ir →</a>
                     </div>
                     <div class="link-card">
-                        <div class="link-icon">⚡</div>
+                        <div class="link-icon"><img src="iconos/formulario.svg" alt="Icono Formulario"></div>
                         <h3 class="link-title">Formulario Entrevista 1-1</h3>
                         <p class="link-description">Este formulario es el primer paso para aplicar al programa 1:1 personalizado...</p>
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3dF0cADEIrJXSseSM6ANcTn-4S7kUQGP20cm-7sZceDyiaQ/viewform?usp=header" class="link-url">Ir →</a>
@@ -1046,7 +1057,6 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
 
             </div>
         </section>
-
 
 <!-- SECCIÓN: Política de Privacidad -->
         <section id="privacidad" class="section">
@@ -1124,7 +1134,7 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
                         <li>Teléfono: +1 234 567 890</li>
                         <li>Respuesta en 48 horas hábiles</li>
                     </ul>
-                    
+
                     <div class="ultima-actualizacion">
                         <p><strong>Última actualización:</strong> <span id="fecha-actualizacion-privacidad"></span></p>
                     </div>
@@ -1199,7 +1209,7 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
                         <li>Las señales son educativas, no garantías</li>
                         <li>Debes operar solo con capital que puedas perder</li>
                     </ul>
-
+      
                     <h3>8. Terminación del Servicio</h3>
                     <p>Nos reservamos el derecho de:</p>
                     <ul class="lista-guiones">
@@ -1235,7 +1245,7 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
 
                 <div class="redes-grid">
                     <a href="https://www.instagram.com/atlastradinguniversity?igsh=Z3FtNDg3N2NwN2Yy" target="_blank" class="red-card">
-                        <div class="red-icon">📸</div>
+                        <div class="red-icon"><img src="iconos/instagram.svg" alt="Icono Instagram"></div>
                         <div class="red-name">Instagram</div>
                         <div class="red-description">
                             descripción...............
@@ -1244,7 +1254,7 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
                     </a>
 
                     <a href="https://www.tiktok.com/@atlastradinguniversity?_r=1&_t=ZS-91D3rxWhBea" target="_blank" class="red-card">
-                        <div class="red-icon">🎵</div>
+                        <div class="red-icon"><img src="iconos/tiktok.svg" alt="Icono Tiktok"></div>
                         <div class="red-name">TikTok</div>
                         <div class="red-description">
                             Videos cortos, lives todos los días mostrando mi estrategia y resultados.
@@ -1253,7 +1263,7 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
                     </a>
 
                     <a href="https://youtube.com/@atlastradinguniversity?si=HRYtHHpBDqxeHF-q" target="_blank" class="red-card">
-                        <div class="red-icon"></div>
+                        <div class="red-icon"><img src="iconos/youtube.svg" alt="Icono Youtube"></div>
                         <div class="red-name">YouTube</div>
                         <div class="red-description">
                             descripción.......
@@ -1262,7 +1272,7 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
                     </a>
 
                     <a href="...." target="_blank" class="red-card">
-                        <div class="red-icon">🐦</div>
+                        <div class="red-icon"><img src="iconos/twitter.svg" alt="Icono Twitter"></div>
                         <div class="red-name">Twitter/X</div>
                         <div class="red-description">
                             Análisis de mercado en tiempo real, noticias financieras importantes y actualizaciones rápidas de la comunidad.
@@ -1271,16 +1281,16 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
                     </a>
 
                     <a href="...." target="_blank" class="red-card">
-                        <div class="red-icon">🎮</div>
+                        <div class="red-icon"><img src="iconos/discord.svg" alt="Icono Discord"></div>
                         <div class="red-name">Discord</div>
                         <div class="red-description">
                             Servidor exclusivo para miembros. Chat en tiempo real, canales temáticos y eventos especiales de la comunidad.
                         </div>
                         <div class="red-username">@atlastradinguniversity</div>
-                    <a/>
+                    </a>
                 </div>
-
-                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(0, 255, 136, 0.1); border-radius: 16px; border: 1px solid var(--primary-color);">
+     
+<div style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(0, 255, 136, 0.1); border-radius: 16px; border: 1px solid var(--primary-color);">
                     <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Lo que podrás encontrar:</h3>
                     <ul class="lista-guiones" style="max-width: 600px; margin: 0 auto; text-align: left;">
                         <li>Contenido </li>
@@ -1365,7 +1375,7 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
                 month: 'long',
                 day: 'numeric'
             });
-            
+
             // Actualizar fecha de privacidad
             const fechaPrivacidad = document.getElementById('fecha-actualizacion-privacidad');
             if (fechaPrivacidad) {
@@ -1409,7 +1419,3 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
     </script>
 </body>
 </html>
-                
-
-
-     
