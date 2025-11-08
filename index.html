@@ -1314,11 +1314,9 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
             <ul class="footer-links">
                 <li><a href="#" onclick="showSection('privacidad'); return false;">Privacidad</a></li>
                 <li><a href="#" onclick="showSection('terminos'); return false;">Términos</a></li>
-                <!-- INICIO DEL CAMBIO -->
-                <!-- Línea original eliminada: <li><a href="#" onclick="showSection('redes'); return false;">Redes</a></li> -->
-                <!-- Línea movida desde la navegación superior: -->
+                
+                <li><a href="#" onclick="showSection('redes'); return false;">Redes</a></li> -->
                 <li><a onclick="showSection('contactos')" class="nav-link">Contactos</a></li>
-                <!-- FIN DEL CAMBIO -->
             </ul>
         </div>
     </footer>
@@ -1327,9 +1325,6 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
          JAVASCRIPT - PANTALLA DE CARGA
          ===================================== -->
     <script>
-        // ============================================
-        // CONTROL DE PANTALLA DE CARGA
-        // ============================================
         window.addEventListener('load', function() {
             // Esperar 1.5 segundos y luego ocultar la pantalla de carga
             setTimeout(function() {
@@ -1352,15 +1347,12 @@ Aprende de otros traders y recibe información valiosa que te ayudará a avanzar
                 section.classList.remove('active');
             });
 
-            // Quitar active de todos los enlaces
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
             });
 
-            // Mostrar la sección seleccionada
             document.getElementById(sectionId).classList.add('active');
 
-            // Agregar active al enlace clickeado si está en la navegación principal
             if (event && event.target && event.target.classList.contains('nav-link')) {
                 event.target.classList.add('active');
             }
